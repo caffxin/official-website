@@ -197,7 +197,7 @@ function App() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              創意工作室
+              咖昕科技工作室
             </motion.span>
             <motion.div
               className="ml-2 w-2 h-2 bg-secondary-300 rounded-full"
@@ -304,14 +304,14 @@ function App() {
               initial="hidden"
               animate="visible"
             >
-              歡迎來到 <motion.span 
+              打造您的專屬數位未來 <motion.span 
                 className="text-primary-800 inline-block"
                 animate={{ 
                   color: ['#0D1E4C', '#26415E', '#0D1E4C'],
                 }}
                 transition={{ duration: 8, repeat: Infinity }}
               >
-                創意工作室
+                
               </motion.span>
             </motion.h1>
             
@@ -332,7 +332,7 @@ function App() {
               animate="visible"
               transition={{ delay: 0.4 }}
             >
-              我們提供客製化的數位解決方案，幫助企業建立強大的線上形象並實現業務目標。
+              我們提供客製化的數位解決方案，幫助企業優化使用者體驗、提升品牌價值，讓您的數位化轉型更輕鬆！
             </motion.p>
             
             <motion.div 
@@ -348,7 +348,7 @@ function App() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10">聯絡我們</span>
+                <span className="relative z-10">開始合作</span>
                 <motion.span 
                   className="absolute inset-0 bg-primary-900 rounded-lg"
                   initial={{ x: '-100%' }}
@@ -364,7 +364,7 @@ function App() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10">查看作品</span>
+                <span className="relative z-10">探索案例</span>
                 <motion.span 
                   className="absolute inset-0 bg-secondary-200 rounded-lg"
                   initial={{ y: '100%' }}
@@ -544,7 +544,7 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                創意工作室是一個由經驗豐富的設計師和開發人員組成的專業團隊，擁有超過5年的行業經驗。我們專注於為客戶提供高品質的數位解決方案，從網站設計到應用程式開發，我們都能滿足您的需求。
+                咖昕科技工作室是一個由經驗豐富的設計師和開發人員組成的專業團隊，擁有超過5年的行業經驗。我們專注於為客戶提供高品質的數位解決方案，從網站設計到應用程式開發，都能滿足您的需求。
               </motion.p>
               
               <motion.h3 
@@ -566,11 +566,11 @@ function App() {
               >
                 {[
                   "網站設計與開發",
-                  "電子商務解決方案",
-                  "行動應用程式開發",
-                  "品牌設計與策略",
+                  "WordPress 開發與客製化",
+                  "CRM 系統開發",
+                  "業務自動化解決方案 (Make工具)",
                   "UI/UX 設計",
-                  "數位行銷服務"
+                  "數位轉型與流程優化"
                 ].map((skill, index) => (
                   <motion.div 
                     key={skill}
@@ -589,7 +589,7 @@ function App() {
                 ))}
               </motion.div>
               
-              <motion.a 
+              {/* <motion.a 
                 href="#" 
                 className="inline-flex items-center text-primary-800 hover:text-primary-900 group"
                 initial={{ opacity: 0, y: 10 }}
@@ -606,7 +606,7 @@ function App() {
                 >
                   <ExternalLink size={18} className="ml-2" />
                 </motion.span>
-              </motion.a>
+              </motion.a> */}
             </motion.div>
           </div>
         </div>
@@ -724,49 +724,43 @@ function App() {
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all"
               variants={itemVariants}
               whileHover={{ 
-                y: -10,
-                transition: { duration: 0.3 }
+          y: -10,
+          transition: { duration: 0.3 }
               }}
             >
               <motion.div className="relative overflow-hidden">
-                <motion.img 
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="電子商務網站" 
-                  className="w-full h-48 object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                />
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
-                >
-                  <div className="p-4 text-white">
-                    <p className="text-sm font-medium">電子商務專案</p>
-                  </div>
-                </motion.div>
+          <motion.img 
+            src="../public/images/wordpress.png" 
+            alt="WordPress 網站" 
+            className="w-full h-48 object-cover"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
+          >
+            <div className="p-4 text-white">
+              <p className="text-sm font-medium">WordPress 網站</p>
+            </div>
+          </motion.div>
               </motion.div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-primary-800">時尚電商平台</h3>
-                <p className="text-gray-600 mb-4">
-                  為本地服裝品牌打造的全功能電子商務網站，提供流暢的購物體驗。
-                </p>
-                <div className="flex justify-between">
-                  <motion.a 
-                    href="#" 
-                    className="text-primary-800 hover:text-primary-900 inline-flex items-center"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    查看案例 <ExternalLink size={16} className="ml-1" />
-                  </motion.a>
-                  <motion.a 
-                    href="#" 
-                    className="text-primary-800 hover:text-primary-900 inline-flex items-center"
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Github size={20} />
-                  </motion.a>
-                </div>
+          <h3 className="text-xl font-semibold mb-2 text-primary-800">旅遊部落格</h3>
+          <p className="text-gray-600 mb-4">
+            專為旅遊愛好者打造的 WordPress 部落格網站，幫助部落客分享精彩旅程，提升品牌影響力。
+          </p>
+          <div className="flex justify-end">
+            <motion.a 
+              href="https://aiwajourney.com/" 
+              className="text-primary-800 hover:text-primary-900 inline-flex items-center"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.2 }}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              查看案例 <ExternalLink size={16} className="ml-1" />
+            </motion.a>
+          </div>
               </div>
             </motion.div>
             
@@ -775,49 +769,43 @@ function App() {
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all"
               variants={itemVariants}
               whileHover={{ 
-                y: -10,
-                transition: { duration: 0.3 }
+          y: -10,
+          transition: { duration: 0.3 }
               }}
             >
               <motion.div className="relative overflow-hidden">
-                <motion.img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="企業形象網站" 
-                  className="w-full h-48 object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                />
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
-                >
-                  <div className="p-4 text-white">
-                    <p className="text-sm font-medium">品牌重塑專案</p>
-                  </div>
-                </motion.div>
+          <motion.img 
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+            alt="企業形象網站" 
+            className="w-full h-48 object-cover"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
+          >
+            <div className="p-4 text-white">
+              <p className="text-sm font-medium">品牌重塑專案</p>
+            </div>
+          </motion.div>
               </motion.div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-primary-800">企業品牌重塑</h3>
-                <p className="text-gray-600 mb-4">
-                  為成立十年的科技公司進行品牌重塑，包括新的視覺識別和網站設計。
-                </p>
-                <div className="flex justify-between">
-                  <motion.a 
-                    href="#" 
-                    className="text-primary-800 hover:text-primary-900 inline-flex items-center"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    查看案例 <ExternalLink size={16} className="ml-1" />
-                  </motion.a>
-                  <motion.a 
-                    href="#" 
-                    className="text-primary-800 hover:text-primary-900 inline-flex items-center"
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Github size={20} />
-                  </motion.a>
-                </div>
+          <h3 className="text-xl font-semibold mb-2 text-primary-800">企業品牌重塑</h3>
+          <p className="text-gray-600 mb-4">
+            為成立十年的科技公司進行品牌重塑，包括新的視覺識別和網站設計。
+          </p>
+          <div className="flex justify-end">
+            <motion.a 
+              href="#" 
+              className="text-primary-800 hover:text-primary-900 inline-flex items-center"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.2 }}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              查看案例 <ExternalLink size={16} className="ml-1" />
+            </motion.a>                  
+          </div>
               </div>
             </motion.div>
             
@@ -826,49 +814,43 @@ function App() {
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all"
               variants={itemVariants}
               whileHover={{ 
-                y: -10,
-                transition: { duration: 0.3 }
+          y: -10,
+          transition: { duration: 0.3 }
               }}
             >
               <motion.div className="relative overflow-hidden">
-                <motion.img 
-                  src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="行動應用程式" 
-                  className="w-full h-48 object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                />
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
-                >
-                  <div className="p-4 text-white">
-                    <p className="text-sm font-medium">行動應用專案</p>
-                  </div>
-                </motion.div>
+          <motion.img 
+            src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+            alt="行動應用程式" 
+            className="w-full h-48 object-cover"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
+          >
+            <div className="p-4 text-white">
+              <p className="text-sm font-medium">行動應用專案</p>
+            </div>
+          </motion.div>
               </motion.div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-primary-800">健康追蹤應用</h3>
-                <p className="text-gray-600 mb-4">
-                  為健康產業客戶開發的行動應用程式，幫助用戶追蹤健康數據和運動記錄。
-                </p>
-                <div className="flex justify-between">
-                  <motion.a 
-                    href="#" 
-                    className="text-primary-800 hover:text-primary-900 inline-flex items-center"
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    查看案例 <ExternalLink size={16} className="ml-1" />
-                  </motion.a>
-                  <motion.a 
-                    href="#" 
-                    className="text-primary-800 hover:text-primary-900 inline-flex items-center"
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Github size={20} />
-                  </motion.a>
-                </div>
+          <h3 className="text-xl font-semibold mb-2 text-primary-800">健康追蹤應用</h3>
+          <p className="text-gray-600 mb-4">
+            為健康產業客戶開發的行動應用程式，幫助用戶追蹤健康數據和運動記錄。
+          </p>
+          <div className="flex justify-end">
+            <motion.a 
+              href="#" 
+              className="text-primary-800 hover:text-primary-900 inline-flex items-center"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.2 }}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              查看案例 <ExternalLink size={16} className="ml-1" />
+            </motion.a>                  
+          </div>
               </div>
             </motion.div>
           </motion.div>
@@ -922,7 +904,11 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                無論您有任何問題或專案需求，都歡迎隨時與我們聯繫。我們期待與您討論如何為您的業務提供最佳的數位解決方案。
+                準備好數位升級了嗎？
+                <br /><br />無論您有任何【網站開發】、【系統建置】、【業務自動化】相關需求，
+                <br />歡迎隨時與我們聯繫，
+                我們將提供最適合您的數位解決方案，助您的業務更上一層樓！
+                <br /><br />📞 歡迎來信或填寫表單，讓我們聊聊您的需求！
               </motion.p>
               
               <motion.div 
@@ -949,7 +935,7 @@ function App() {
                   </a>
                 </motion.div>
                 
-                <motion.div 
+                {/* <motion.div 
                   className="flex items-center"
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
@@ -964,9 +950,9 @@ function App() {
                   <a href="#" className="text-gray-700 hover:text-primary-800">
                     linkedin.com/company/creativestudio
                   </a>
-                </motion.div>
+                </motion.div> */}
                 
-                <motion.div 
+                {/* <motion.div 
                   className="flex items-center"
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
@@ -981,7 +967,7 @@ function App() {
                   <a href="#" className="text-gray-700 hover:text-primary-800">
                     github.com/creativestudio
                   </a>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
             </motion.div>
             
@@ -1103,18 +1089,18 @@ function App() {
         />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <motion.p 
-              className="text-gray-600 mb-4 md:mb-0"
+              className="text-gray-600 mb-4 md:mb-0 text-center"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
             >
-              © 2025 創意工作室. 版權所有.
+              © 2025 咖昕科技工作室. 版權所有.
             </motion.p>
             
-            <motion.div 
+            {/* <motion.div 
               className="flex space-x-4"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1122,21 +1108,21 @@ function App() {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               {[
-                { icon: <Github size={20} />, href: "#" },
-                { icon: <Linkedin size={20} />, href: "#" },
-                { icon: <Mail size={20} />, href: "#" }
+          { icon: <Github size={20} />, href: "#" },
+          { icon: <Linkedin size={20} />, href: "#" },
+          { icon: <Mail size={20} />, href: "#" }
               ].map((item, index) => (
-                <motion.a 
-                  key={index}
-                  href={item.href} 
-                  className="text-gray-600 hover:text-primary-800"
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {item.icon}
-                </motion.a>
+          <motion.a 
+            key={index}
+            href={item.href} 
+            className="text-gray-600 hover:text-primary-800"
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.2 }}
+          >
+            {item.icon}
+          </motion.a>
               ))}
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </footer>
