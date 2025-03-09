@@ -730,7 +730,7 @@ function App() {
             >
               <motion.div className="relative overflow-hidden">
           <motion.img 
-            src="../public/images/wordpress.png" 
+            src={`${import.meta.env.BASE_URL}images/wordpress.png`} 
             alt="WordPress 網站" 
             className="w-full h-48 object-cover"
             whileHover={{ scale: 1.1 }}
