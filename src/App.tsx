@@ -332,7 +332,7 @@ function App() {
               animate="visible"
               transition={{ delay: 0.4 }}
             >
-              我們提供客製化的數位解決方案，幫助企業優化使用者體驗、提升品牌價值，讓您的數位化轉型更輕鬆！
+              我們提供客製化的數位解決方案，幫助個人/企業優化使用者體驗、提升品牌價值，讓您的數位化轉型更輕鬆！
             </motion.p>
             
             <motion.div 
@@ -383,7 +383,7 @@ function App() {
           >
             <motion.div className="relative">
               <motion.img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                src={`${import.meta.env.BASE_URL}images/customized.jpg`}
                 alt="團隊合作" 
                 className="rounded-lg w-full max-w-md h-auto object-cover border-4 border-white shadow-lg relative z-10"
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -494,7 +494,7 @@ function App() {
             >
               <motion.div className="relative">
                 <motion.img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
+                  src={`${import.meta.env.BASE_URL}images/work.jpg`}
                   alt="團隊工作" 
                   className="rounded-lg shadow-lg max-w-full h-auto relative z-10"
                   whileHover={{ scale: 1.03 }}
@@ -730,7 +730,7 @@ function App() {
             >
               <motion.div className="relative overflow-hidden">
           <motion.img 
-            src={`${import.meta.env.BASE_URL}images/wordpress.png`} 
+            src={`${import.meta.env.BASE_URL}images/website.jpg`} 
             alt="WordPress 網站" 
             className="w-full h-48 object-cover"
             whileHover={{ scale: 1.1 }}
@@ -745,7 +745,7 @@ function App() {
           </motion.div>
               </motion.div>
               <div className="p-6">
-          <h3 className="text-xl font-semibold mb-2 text-primary-800">旅遊部落格</h3>
+          <h3 className="text-xl font-semibold mb-2 text-primary-800">個人旅遊部落格</h3>
           <p className="text-gray-600 mb-4">
             專為旅遊愛好者打造的 WordPress 部落格網站，幫助部落客分享精彩旅程，提升品牌影響力。
           </p>
@@ -775,8 +775,8 @@ function App() {
             >
               <motion.div className="relative overflow-hidden">
           <motion.img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-            alt="企業形象網站" 
+                  src={`${import.meta.env.BASE_URL}images/enterprise-admin-system.jpg`} 
+            alt="企業後台系統" 
             className="w-full h-48 object-cover"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5 }}
@@ -785,14 +785,14 @@ function App() {
             className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
           >
             <div className="p-4 text-white">
-              <p className="text-sm font-medium">品牌重塑專案</p>
+              <p className="text-sm font-medium">企業後台系統專案</p>
             </div>
           </motion.div>
               </motion.div>
               <div className="p-6">
-          <h3 className="text-xl font-semibold mb-2 text-primary-800">企業品牌重塑</h3>
+                <h3 className="text-xl font-semibold mb-2 text-primary-800">企業後台系統設計與開發</h3>
           <p className="text-gray-600 mb-4">
-            為成立十年的科技公司進行品牌重塑，包括新的視覺識別和網站設計。
+                  為公司打造專屬後台管理系統，涵蓋使用者管理、設備廠人力派遣、紡織廠實驗記錄管理等功能，提升營運效率與管理便利性。
           </p>
           <div className="flex justify-end">
             <motion.a 
@@ -803,7 +803,7 @@ function App() {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              查看案例 <ExternalLink size={16} className="ml-1" />
+              待上架 <ExternalLink size={16} className="ml-1" />
             </motion.a>                  
           </div>
               </div>
@@ -820,8 +820,8 @@ function App() {
             >
               <motion.div className="relative overflow-hidden">
           <motion.img 
-            src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-            alt="行動應用程式" 
+            src={`${import.meta.env.BASE_URL}images/ai-agent-make.jpg`} 
+            alt="企業內部流程自動化" 
             className="w-full h-48 object-cover"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5 }}
@@ -830,14 +830,14 @@ function App() {
             className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end"
           >
             <div className="p-4 text-white">
-              <p className="text-sm font-medium">行動應用專案</p>
+              <p className="text-sm font-medium">個人 AI 助理</p>
             </div>
           </motion.div>
               </motion.div>
               <div className="p-6">
-          <h3 className="text-xl font-semibold mb-2 text-primary-800">健康追蹤應用</h3>
+                <h3 className="text-xl font-semibold mb-2 text-primary-800">建築工作室 AI 助理</h3>
           <p className="text-gray-600 mb-4">
-            為健康產業客戶開發的行動應用程式，幫助用戶追蹤健康數據和運動記錄。
+            運用 Make 自動化工具，打造智能助理，提升作業效率。透過自動化表單、文件整合、LINE@ 助理等功能，優化協作與營運流程。
           </p>
           <div className="flex justify-end">
             <motion.a 
@@ -848,7 +848,7 @@ function App() {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              查看案例 <ExternalLink size={16} className="ml-1" />
+              待上架 <ExternalLink size={16} className="ml-1" />
             </motion.a>                  
           </div>
               </div>
