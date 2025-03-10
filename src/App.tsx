@@ -13,6 +13,7 @@ function App() {
   const scale = useTransform(scrollYProgress, [0, 0.05], [1, 0.95]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -148,7 +149,6 @@ function App() {
       } 
     }
   };
-
 
   return (
     <div className="min-h-screen bg-white text-gray-800 overflow-hidden relative">
