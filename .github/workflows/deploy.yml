@@ -19,14 +19,14 @@ jobs:
       - name: 📦 設定 Node.js 環境
         uses: actions/setup-node@v4
         with:
-          node-version: 20  # 這裡可換成你的 Node 版本
-          cache: 'npm'  # 啟用 npm 快取加速安裝
+          node-version: 20
+          cache: 'npm'
 
       - name: 📥 安裝依賴
         run: npm install
 
       - name: 🏗️ 建置專案
-        run: npx vite build  # 這裡視你的專案需求修改
+        run: npx vite build
 
       - name: 🔧 設定 Git 使用者
         run: |
@@ -34,4 +34,6 @@ jobs:
           git config --global user.name "CaffXin Tech"
 
       - name: 🚀 部署到 GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
