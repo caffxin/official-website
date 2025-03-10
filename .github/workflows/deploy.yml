@@ -28,5 +28,10 @@ jobs:
       - name: 🏗️ 建置專案
         run: npx vite build  # 這裡視你的專案需求修改
 
+      - name: 🔧 設定 Git 使用者
+        run: |
+          git config --global user.email "caffxin.tech@gmail.com"
+          git config --global user.name "CaffXin Tech"
+
       - name: 🚀 部署到 GitHub Pages
         run: npm run deploy
