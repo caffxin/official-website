@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, FormEvent } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronRight, Code, Cpu, Database, Globe } from 'lucide-react';
+import { Menu, X, Mail, ExternalLink, ChevronRight, Code, Cpu, Database, Globe, MessageSquare } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
@@ -228,7 +228,7 @@ function App() {
               <motion.a 
                 key={item}
                 href={`#${['home', 'about', 'projects', 'contact'][index]}`}
-                className="text-gray-800 hover:text-primary-800 transition-colors relative"
+                className="text-gray-800 hover:text-primary-800 transition-colors relative font-bold"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
@@ -252,7 +252,7 @@ function App() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div 
-              className="md:hidden bg-white/95 backdrop-blur-sm shadow-lg"
+              className="md:hidden bg-white/95 backdrop-blur-sm"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -263,7 +263,7 @@ function App() {
                   <motion.a 
                     key={item}
                     href={`#${['home', 'about', 'projects', 'contact'][index]}`}
-                    className="text-gray-800 hover:text-primary-800 transition-colors"
+                    className="text-gray-800 hover:text-primary-800 transition-colors font-bold"
                     onClick={toggleMenu}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -527,64 +527,66 @@ function App() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <motion.h3 
+              <motion.h3
                 className="text-2xl font-semibold mb-4 text-primary-800"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
               >
-                我們是誰
+                用咖啡點燃科技，用技術創造快樂！
               </motion.h3>
-              
-              <motion.p 
+
+              <motion.p
                 className="text-gray-700 mb-6"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                咖昕科技工作室是一個由經驗豐富的設計師和開發人員組成的專業團隊，擁有超過5年的行業經驗。我們專注於為客戶提供高品質的數位解決方案，從網站設計到應用程式開發，都能滿足您的需求。
+                咖昕科技由一對熱愛咖啡的工程師夫妻創立，結合設計與開發專家，擁有超過 5 年經驗，我們相信：「好的咖啡喚醒靈魂，好的技術改變世界」。
+                <br />
+                <br />
+                而「CaffXin」融合了 Caffeine（咖啡因）與「昕」（晨曦、創新），也代表「開心」，
+                希望科技能創造出更美好的生活，讓每個人都能享受到科技帶來的便利與愉悅。
+                <br />
+                <br />
+                在咖昕科技，我們打造高效、實用且人性化的技術解決方案，讓企業與個人都能像享受一杯香醇咖啡一樣，感受科技帶來的舒適與滿足。
               </motion.p>
               
-              <motion.h3 
+              <motion.h3
                 className="text-2xl font-semibold mb-4 text-primary-800"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
-                我們的專長
+                我們的專業服務
               </motion.h3>
-              
-              <motion.div 
-                className="grid grid-cols-2 gap-4 mb-6"
+
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
               >
                 {[
-                  "網站設計與開發",
-                  "WordPress 開發與客製化",
-                  "CRM 系統開發",
-                  "業務自動化解決方案 (Make工具)",
-                  "UI/UX 設計",
-                  "數位轉型與流程優化"
-                ].map((skill, index) => (
-                  <motion.div 
-                    key={skill}
-                    className="flex items-center"
+                  { "title": "網站設計與開發", "desc": "量身打造高效能網站，提升品牌形象。" },
+                  { "title": "WordPress 客製化", "desc": "客製主題與外掛優化，打造專屬網站。" },
+                  { "title": "後台管理系統開發", "desc": "整合數據與權限，簡化管理流程。" },
+                  { "title": "流程自動化", "desc": "AI 助理結合自動化工具，提升效率，節省時間與人力成本。"},
+                  { "title": "UI/UX 設計", "desc": "直覺操作與美觀設計，提升使用體驗與轉換率。" },
+                  { "title": "數位轉型與流程優化", "desc": "系統化管理與優化流程，提升競爭力。" }
+                ].map((service, index) => (
+                  <motion.div
+                    key={index}
+                    className="p-6 bg-[#83A6CE] bg-opacity-10 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300"
                     variants={itemVariants}
-                    whileHover={{ x: 5 }}
+                    whileHover={{ scale: 1.05 }}
                   >
-                    <motion.div
-                      variants={skillIconVariants}
-                      whileHover="hover"
-                    >
-                      <ChevronRight size={20} className="text-secondary-300 mr-2" />
-                    </motion.div>
-                    <span className="text-gray-700">{skill}</span>
+                    <h4 className="text-lg font-semibold text-primary-800">{service.title}</h4>
+                    <p className="text-gray-700 mt-2">{service.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -894,21 +896,27 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
               >
-                聯絡資訊
+                合作方式
               </motion.h3>
               
-              <motion.p 
+              <motion.p
                 className="text-gray-700 mb-6"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                準備好數位升級了嗎？
-                <br /><br />無論您有任何【網站開發】、【系統建置】、【業務自動化】相關需求，
-                <br />歡迎隨時與我們聯繫，
-                我們將提供最適合您的數位解決方案，助您的業務更上一層樓！
-                <br /><br />📞 歡迎來信或填寫表單，讓我們聊聊您的需求！
+                為了讓我們更準確了解您的需求，請您在填寫時盡可能提供詳細資訊，例如：
+                <br /><br />
+                📌 <span className="font-bold">專案類型</span>（如網站開發、系統整合、API串接、UI/UX設計等）<br />
+                📌 <span className="font-bold">專案背景</span>（您的產業類別、目前的情況、希望解決的問題）<br />
+                📌 <span className="font-bold">主要功能需求</span>（例如：「希望開發一個會員系統，包含註冊、登入、權限管理等」）<br />
+                📌 <span className="font-bold">預計時程</span>（何時希望開始、何時需要完成）<br />
+                📌 <span className="font-bold">預算範圍</span>（若有預算考量，請提供參考範圍，以便我們評估最佳方案）<br />
+                📌 <span className="font-bold">特殊需求</span>（如指定技術、與現有系統整合、支援語言或平台）<br /><br />
+                我們提供<span className="font-bold">免費諮詢💬</span>，讓您先了解最佳方案，再決定是否進一步合作！
+                <br /><br />
+                <span className="font-bold">📩 來信或填寫表單，我們將與您詳談，確保最合適的解決方案</span>                
               </motion.p>
               
               <motion.div 
@@ -918,6 +926,7 @@ function App() {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
+                {/* Email 聯絡方式 */}
                 <motion.div 
                   className="flex items-center"
                   variants={itemVariants}
@@ -934,8 +943,8 @@ function App() {
                     caffxin.tech@gmail.com
                   </a>
                 </motion.div>
-                
-                {/* <motion.div 
+                {/* LINE 聯絡方式 */}
+                {/* <motion.div
                   className="flex items-center"
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
@@ -945,28 +954,21 @@ function App() {
                     whileHover={{ rotate: 15 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Linkedin size={20} />
+                    <MessageSquare size={20} />
                   </motion.div>
-                  <a href="#" className="text-gray-700 hover:text-primary-800">
-                    linkedin.com/company/creativestudio
-                  </a>
-                </motion.div> */}
-                
-                {/* <motion.div 
-                  className="flex items-center"
-                  variants={itemVariants}
-                  whileHover={{ x: 5 }}
-                >
-                  <motion.div
-                    className="text-secondary-300 mr-3"
-                    whileHover={{ rotate: 15 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Github size={20} />
-                  </motion.div>
-                  <a href="#" className="text-gray-700 hover:text-primary-800">
-                    github.com/creativestudio
-                  </a>
+                  <div className="flex items-center gap-4">
+                    <a href="https://line.me/ti/p/你的LINE-ID"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:text-primary-800">
+                      LINE: @你的LINE-ID
+                    </a>
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/line-qr.png`}
+                      alt="LINE QR Code"
+                      className="w-24 h-24 rounded-lg border border-gray-200 shadow-sm"
+                    />
+                  </div>
                 </motion.div> */}
               </motion.div>
             </motion.div>
@@ -1037,7 +1039,7 @@ function App() {
                     name="message"
                     rows={4} 
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-800"
-                    placeholder="請描述您的專案需求"
+                    placeholder="「我們需要一個內部使用的業務管理工具，包含專案追蹤、任務分派、檔案上傳等功能，並與 Google Drive 串接。希望介面簡單易用，預算可討論，預計 2 個月內完成。」"
                     whileFocus={{ scale: 1.01 }}
                     transition={{ duration: 0.2 }}
                     required
