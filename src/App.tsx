@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, FormEvent } from 'react';
-import { Menu, X, Mail, ExternalLink, ChevronRight, Code, Cpu, Database, Globe, MessageSquare } from 'lucide-react';
+import { Menu, X, Mail, ExternalLink, ChevronRight, Code, Cpu, Database, Globe, MessageSquare, Copy } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
@@ -13,6 +13,14 @@ function App() {
   const scale = useTransform(scrollYProgress, [0, 0.05], [1, 0.95]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success('已複製到剪貼板！');
+    } catch (err) {
+      toast.error('複製失敗，請手動複製。');
+    }
+  };
 
   useEffect(() => {
     setIsLoaded(true);
@@ -140,6 +148,7 @@ function App() {
       } 
     }
   };
+
 
   return (
     <div className="min-h-screen bg-white text-gray-800 overflow-hidden relative">
@@ -942,6 +951,14 @@ function App() {
                   <a href="mailto:caffxin.tech@gmail.com" className="text-gray-700 hover:text-primary-800">
                     caffxin.tech@gmail.com
                   </a>
+                  <motion.button
+                    className="text-secondary-300 hover:text-primary-800 p-1"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => copyToClipboard('caffxin.tech@gmail.com')}
+                  >
+                    <Copy size={16} />
+                  </motion.button>
                 </motion.div>
                 {/* LINE 聯絡方式 */}
                 {/* <motion.div
@@ -1044,6 +1061,17 @@ function App() {
                     transition={{ duration: 0.2 }}
                     required
                   />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.3 }}
+                  className="mt-3"
+                >
+                  <p className="text-xs text-gray-500">
+                    <span className="font-bold">我們承諾保護您的隱私，您提供的資訊僅用於與您聯繫，不會外洩或用於其他用途。</span>
+                  </p>
                 </motion.div>
                 
                 {/* 隱藏欄位，用於指定收件人 */}

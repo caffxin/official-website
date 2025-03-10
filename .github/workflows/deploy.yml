@@ -1,0 +1,32 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # 當 master 分支有變更時觸發
+
+permissions:
+  contents: write  # 允許工作流程寫入 gh-pages 分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 檢出最新程式碼
+        uses: actions/checkout@v4
+
+      - name: 📦 設定 Node.js 環境
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # 這裡可換成你的 Node 版本
+          cache: 'npm'  # 啟用 npm 快取加速安裝
+
+      - name: 📥 安裝依賴
+        run: npm install
+
+      - name: 🏗️ 建置專案
+        run: npx vite build  # 這裡視你的專案需求修改
+
+      - name: 🚀 部署到 GitHub Pages
+        run: npm run deploy
