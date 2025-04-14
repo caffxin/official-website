@@ -220,6 +220,11 @@ function App() {
                 ease: "easeInOut"
               }}
             />
+            <img
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="Logo"
+              className="ml-2 w-6 h-6"
+            />
           </motion.a>
           
           {/* Mobile menu button */}
@@ -1125,7 +1130,7 @@ function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
             >
-              © 2025 咖昕科技工作室. 版權所有.
+              Copyright © 2025 咖昕科技工作室
             </motion.p>
             
             {/* <motion.div 
