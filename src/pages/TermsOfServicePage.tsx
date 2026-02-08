@@ -1,8 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const TermsOfServicePage: React.FC = () => {
   return (
-    <article className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>使用條款 - 咖昕科技 | 服務條款與版權聲明</title>
+        <meta name="description" content="咖昕科技網站使用條款：包括服務條款、內容使用規範、智慧財產權說明與免責聲明。" />
+      </Helmet>
+      <article className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12 lg:py-16 max-w-4xl">
         {/* 頁面標題 */}
         <h1 className="text-4xl font-bold mb-2 text-gray-900">使用條款</h1>
@@ -40,6 +46,7 @@ const TermsOfServicePage: React.FC = () => {
         </section>
       </div>
     </article>
+    </>
   );
 };
 

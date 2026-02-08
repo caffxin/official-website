@@ -1,4 +1,5 @@
 import React, { useRef, FormEvent, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Mail, Copy, ClipboardList, Briefcase, Layers, Calendar, DollarSign, Settings, MessageCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
@@ -43,8 +44,13 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full" style={{ background: 'rgb(242, 246, 250)' }}>
-      <div className="container mx-auto px-4 py-12">
+    <>
+      <Helmet>
+        <title>聯絡我們 - 咖昕科技 | 開始你的數位轉型</title>
+        <meta name="description" content="聯絡咖昕科技：台中市北區，郵件 caffxin.tech@gmail.com，或使用聯絡表單詢問專案需求。我們將盡快回覆您的訊息。" />
+      </Helmet>
+      <div className="min-h-screen w-full" style={{ background: 'rgb(242, 246, 250)' }}>
+        <div className="container mx-auto px-4 py-12">
         <motion.h1 className="text-3xl font-bold mb-8 text-center text-primary-900" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           聯絡我們
         </motion.h1>
@@ -138,9 +144,10 @@ const ContactPage: React.FC = () => {
             </motion.form>
           </motion.div>
         </div>
+        </div>
       </div>
       <Toaster position="top-center" toastOptions={{ duration: 5000, style: { background: '#fff', color: '#333', boxShadow: '0 3px 10px rgba(0,0,0,0.1)', borderRadius: '8px', padding: '16px' }, success: { iconTheme: { primary: '#0D1E4C', secondary: '#fff' } }, error: { iconTheme: { primary: '#E53E3E', secondary: '#fff' } } }} />
-    </div>
+    </>
   );
 };
 

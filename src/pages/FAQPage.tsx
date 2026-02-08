@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 const MAIN_COLOR = '#26415E';
@@ -78,7 +79,12 @@ const FAQPage: React.FC = () => {
   };
 
   return (
-    <div style={{ background: 'rgb(242, 246, 250)' }} className="min-h-screen w-full">
+    <>
+      <Helmet>
+        <title>常見問題 - 咖昕科技 | FAQ 服務相關常見問答</title>
+        <meta name="description" content="咖昕科技常見問題解答：了解關於網站開發、系統開發、技術服務的常見問題，幫助您更了解我們的服務內容。" />
+      </Helmet>
+      <div style={{ background: 'rgb(242, 246, 250)' }} className="min-h-screen w-full">
       <motion.div className="container mx-auto px-4 py-12" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <motion.h1 className="text-3xl font-bold mb-8 text-center" style={{ color: MAIN_COLOR, fontSize: '1.875rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>常見問題</motion.h1>
         {faqData.map((cat, cidx) => (
@@ -106,8 +112,9 @@ const FAQPage: React.FC = () => {
           </motion.section>
         ))}
       </motion.div>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default FAQPage; 
+export default FAQPage;

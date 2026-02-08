@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 import portfolioData from '../data/portfolioData';
@@ -8,7 +9,12 @@ const cardBorderColor = 'border-[#83A6CE]';
 
 const PortfolioPage: React.FC = () => {
   return (
-    <div className="w-full min-h-screen" style={{ background: 'rgb(242, 246, 250)' }}>
+    <>
+      <Helmet>
+        <title>精選案例 - 咖昕科技 | 企業官網、後台系統、派車平台案例</title>
+        <meta name="description" content="咖昕科技的精選案例展示：包括企業官網、企業後台系統、派車接送平台等客製化開發專案，展示我們的技術實力與設計能力。" />
+      </Helmet>
+      <div className="w-full min-h-screen" style={{ background: 'rgb(242, 246, 250)' }}>
       <motion.div className="container mx-auto px-4 py-12" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <motion.h1 className="text-3xl font-bold mb-8 text-center" style={{ color: 'rgb(38,65,94)' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>精選案例</motion.h1>
         <motion.div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
@@ -34,8 +40,9 @@ const PortfolioPage: React.FC = () => {
           ))}
         </motion.div>
       </motion.div>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default PortfolioPage; 
+export default PortfolioPage;

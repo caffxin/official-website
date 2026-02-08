@@ -1,8 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicyPage: React.FC = () => {
   return (
-    <article className="min-h-screen bg-white">
+    <>
+      <Helmet>
+        <title>隱私權政策 - 咖昕科技 | 個人資料保護政策</title>
+        <meta name="description" content="咖昕科技隱私權政策：說明個人資料蒐集、使用與保護方式，確保您的隱私權受到完整保護。" />
+      </Helmet>
+      <article className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-12 lg:py-16 max-w-4xl">
         {/* 頁面標題 */}
         <h1 className="text-4xl font-bold mb-2 text-gray-900">隱私權政策</h1>
@@ -155,6 +161,7 @@ const PrivacyPolicyPage: React.FC = () => {
         </section>
       </div>
     </article>
+    </>
   );
 };
 

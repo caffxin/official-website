@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import { Code, Globe, Database, Cpu } from 'lucide-react';
@@ -117,7 +118,12 @@ function App() {
   const MotionLink = motion(Link);
 
   const HomePage = () => (
-    <div className="min-h-screen bg-white text-gray-800 overflow-hidden relative">
+    <>
+      <Helmet>
+        <title>咖昕科技有限公司 CaffXin Tech</title>
+        <meta name="description" content="咖昕科技提供企業後台系統開發、網站設計建置、AI 應用整合等一站式數位解決方案，協助企業打造穩定、高效的數位系統，提升營運效率。" />
+      </Helmet>
+      <div className="min-h-screen bg-white text-gray-800 overflow-hidden relative">
       {/* Toast 通知 */}
       <Toaster 
         position="top-center"
@@ -677,6 +683,7 @@ function App() {
         </div>
       </section>
     </div>
+    </>
   );
 
   const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (

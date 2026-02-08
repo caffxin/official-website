@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Users, Search, ShieldCheck, Sparkles, MessageSquare, Handshake } from 'lucide-react';
 
@@ -15,7 +16,12 @@ const MAIN_COLOR = 'rgb(38,65,94)';
 const BORDER_COLOR = '#83A6CE';
 
 const ProcessPage: React.FC = () => (
-  <div style={{ background: 'rgb(242, 246, 250)' }} className="min-h-screen w-full">
+  <>
+    <Helmet>
+      <title>合作流程 - 咖昕科技 | 從需求到上線的完整服務流程</title>
+      <meta name="description" content="了解咖昕科技的合作流程：包括需求提出、溝通報價、簽約付款、開發測試、上線驗收與後續維護等完整服務步驟。" />
+    </Helmet>
+    <div style={{ background: 'rgb(242, 246, 250)' }} className="min-h-screen w-full">
     <motion.div className="container mx-auto px-4 py-12" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
       <motion.h1 className="text-3xl font-bold mb-8 text-center" style={{ color: MAIN_COLOR, fontSize: '1.875rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         合作流程
@@ -152,6 +158,7 @@ const ProcessPage: React.FC = () => (
       </section>
     </motion.div>
   </div>
+  </>
 );
 
-export default ProcessPage; 
+export default ProcessPage;
