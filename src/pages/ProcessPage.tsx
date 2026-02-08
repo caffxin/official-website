@@ -11,15 +11,8 @@ const steps = [
   { title: '後續維護', desc: '提供維護、優化與技術支援。' },
 ];
 
-const modes = [
-  { name: '定額案', desc: '專案有明確範圍與時程，簽訂定額合約。' },
-  { name: '長期維運', desc: '提供系統長期維護、功能優化與技術支援。' },
-  { name: '技術協作', desc: '以顧問或外包方式，彈性支援企業技術需求。' },
-];
-
 const MAIN_COLOR = 'rgb(38,65,94)';
 const BORDER_COLOR = '#83A6CE';
-const CIRCLE_BG = '#83A6CE';
 
 const ProcessPage: React.FC = () => (
   <div style={{ background: 'rgb(242, 246, 250)' }} className="min-h-screen w-full">
@@ -29,15 +22,12 @@ const ProcessPage: React.FC = () => (
       </motion.h1>
       {/* 流程圖（圖文對照） */}
       <section className="mb-12">
-        <motion.h2 className="text-2xl font-semibold mb-6 text-left" style={{ color: MAIN_COLOR }} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-          合作流程圖
-        </motion.h2>
         <div className="flex flex-col md:flex-row items-center md:justify-between gap-8">
           {steps.map((step, idx) => (
             <motion.div key={step.title} className="flex flex-col items-center md:w-1/6" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: idx * 0.1 }}>
               <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-2" style={{ background: '#C48CB3', color: '#fff' }}>{idx + 1}</div>
-              <div className="font-semibold mb-1 w-full text-center" style={{ color: MAIN_COLOR }}>{step.title}</div>
-              <div className="text-sm w-full text-center" style={{ color: MAIN_COLOR, opacity: 0.8 }}>{step.desc}</div>
+              <div className="font-bold mb-1 w-full text-center" style={{ color: MAIN_COLOR, fontSize: '1.125rem' }}>{step.title}</div>
+              <div className="text-base w-full text-center" style={{ color: MAIN_COLOR, opacity: 0.8 }}>{step.desc}</div>
               <div className="hidden md:block w-full h-4 border-b-2 border-dashed" style={{ borderColor: BORDER_COLOR, opacity: 0.5, margin: '12px 0' }}></div>
             </motion.div>
           ))}
@@ -157,11 +147,6 @@ const ProcessPage: React.FC = () => (
               <div className="font-bold text-lg mb-1" style={{ color: MAIN_COLOR }}>售後服務</div>
               <div className="text-center text-base" style={{ color: '#26415E' }}>持續協助客戶成長，問題即時回應</div>
             </div>
-          </div>
-          <div className="flex justify-center mt-8">
-            <a href="/official-website/contact" className="px-8 py-3 rounded-full text-white font-bold text-lg transition bg-[#0D1E4C] hover:bg-[#26415E] shadow-md" style={{ letterSpacing: 2 }}>
-              立即諮詢
-            </a>
           </div>
         </section>
       </section>

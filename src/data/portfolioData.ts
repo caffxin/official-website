@@ -2,13 +2,65 @@ import { Project } from '../components/ProjectCard';
 
 const portfolioData: Project[] = [
   {
-    projectName: '智慧接送 LINEBOT + 後台系統',
-    projectType: 'LINEBOT + 管理系統',
-    industry: '接送／物流',
+    projectName: '民眾預約服務平台',
+    projectType: '線上預約｜後台管理',
+    industry: '生命禮儀服務業',
+    problemSolved: [
+      '提供民眾線上預約服務，支援多場地與時段設定',
+      '後台支援報到、場地開放與多人管理作業',
+      '串接既有系統資料，整合權限控管與簡訊通知'
+    ],
+    techStack: ['Java', 'Vue', 'SQL Server'],
+    resultsHighlights: [
+      '預約與現場作業流程數位化，降低人工處理負擔',
+      '管理流程集中化，提升作業效率與即時性',
+    ],
+    image: `${import.meta.env.BASE_URL}images/online_reservation.jpg`,
+    // note: '僅限諮詢展示'
+  },
+  {
+    projectName: '貴賓室訪客管理與即時通知系統',
+    projectType: '訪客管理系統｜航班資料整合',
+    industry: '航空服務 / 場域管理',
+    problemSolved: [
+      '支援貴賓室訪客狀態即時管理與現場作業流程',
+      '整合航班與訪客資料，提升現場資訊一致性',
+      '串接通知機制與後台系統，加快作業反應'
+    ],
+    techStack: ['.NET', 'React', 'Oracle', 'Windows Server', 'Linux'],
+    resultsHighlights: [
+      '提升現場服務流程效率與資訊即時性',
+      '降低人工查詢與重複作業',
+      '系統穩定運作，支援實際現場高使用量情境'
+    ],
+    image: `${import.meta.env.BASE_URL}images/vip_sys.jpg`,
+    // note: '僅限諮詢展示'
+  },
+  {
+    projectName: '業務系統維護與優化',
+    projectType: '既有系統維護',
+    industry: '行政資訊系統',
+    problemSolved: [
+      '負責既有業務系統日常維護與問題排除',
+      '依實際使用需求進行功能調整與優化',
+      '協助系統版本更新與環境維護'
+    ],
+    techStack: ['.NET', 'React', 'Oracle', 'Windows Server', 'Linux'],
+    resultsHighlights: [
+      '系統穩定度提升，降低異常與中斷風險',
+      '延續既有系統使用年限，降低重建成本',
+    ],
+    image: `${import.meta.env.BASE_URL}images/bm_service.jpg`,
+    // note: '僅限諮詢展示'
+  },
+  {
+    projectName: '派車接送平台',
+    projectType: 'LINE BOT | 後台管理',
+    industry: '接送服務',
     problemSolved: [
       '乘客透過 LINE 完成預約，減少客服負擔',
       '後台統一管理訂單與派車事務',
-      '司機透過 LINE 收派單、請假、聯繫客服'
+      '司機透過 LINE 接單、請假、聯繫客服'
     ],
     techStack: ['LINE LIFF', 'LINE Messaging API', 'PHP', 'MySQL', 'GCP', 'Nginx'],
     resultsHighlights: [
@@ -16,7 +68,7 @@ const portfolioData: Project[] = [
       '派車集中管理，提升即時應對效率'
     ],
     image: `${import.meta.env.BASE_URL}images/car_reservation.jpg`,
-    note: '僅限諮詢展示'
+    // note: '僅限諮詢展示'
   },
   {
     projectName: '眼鏡行 ERP 維運與優化',
@@ -25,7 +77,7 @@ const portfolioData: Project[] = [
     problemSolved: [
       '支援進銷存與門市作業',
       '新增功能、優化報表效能',
-      '修正錯誤，確保穩定運作'
+      '修正系統問題，提升整體穩定性'
     ],
     techStack: ['Java', 'JSP/Servlet', 'MySQL', 'Tomcat', 'Linux'],
     resultsHighlights: [
@@ -33,12 +85,12 @@ const portfolioData: Project[] = [
       '穩定性提升，延長系統壽命'
     ],
     image: `${import.meta.env.BASE_URL}images/eyes_erp.jpg`,
-    note: '內部系統，恕不公開展示'
+    // note: '內部系統，恕不公開展示'
   },
   {
     projectName: '旅遊部落格網站建置',
-    projectType: '網站架設 + 部落格經營',
-    industry: '自媒體',
+    projectType: '網站架設｜部落格經營',
+    industry: '自媒體 / 內容平台',
     problemSolved: [
       '分享旅遊行程與生活紀錄',
       '支援業配合作與品牌經營',
@@ -50,12 +102,12 @@ const portfolioData: Project[] = [
       '加強 SEO 與內容行銷效益'
     ],
     image: `${import.meta.env.BASE_URL}images/travel_blog.jpg`,
-    note: 'https://aiwajourney.com/'
+    // note: 'https://aiwajourney.com/'
   },
   {
     projectName: '公會會籍系統報表開發',
     projectType: '報表後端開發',
-    industry: '公協會系統',
+    industry: '公協會管理系統',
     problemSolved: [
       '實作會員報表匯出功能',
       '串接 PostgreSQL 並整合 JOOQ ORM',
@@ -67,12 +119,12 @@ const portfolioData: Project[] = [
       '成功串接前端並支援下載'
     ],
     image: `${import.meta.env.BASE_URL}images/report_proj.jpg`,
-    note: '內部系統，恕不公開展示'
+    // note: '內部系統，恕不公開展示'
   },
   {
     projectName: '監造 LINEBOT 表單整合',
-    projectType: 'LINEBOT + 表單系統',
-    industry: '建築監造',
+    projectType: 'LINEBOT｜表單系統',
+    industry: '建築監造 / 工程管理',
     problemSolved: [
       '整合監造表單至 LINEBOT，簡化現場填寫',
       '使用 Jotform 製作職安、防汛、缺失等檢查表',
@@ -84,7 +136,7 @@ const portfolioData: Project[] = [
       '統一格式，降低錯誤與排版時間'
     ],
     image: `${import.meta.env.BASE_URL}images/linebot_agent.jpg`,
-    note: '僅限諮詢展示'
+    // note: '僅限諮詢展示'
   },
   {
     projectName: '客服管理系統開發',
@@ -102,7 +154,7 @@ const portfolioData: Project[] = [
       '配合需求調整擴充，彈性高'
     ],
     image: `${import.meta.env.BASE_URL}images/customer_support_system.jpg`,
-    note: '內部系統，恕不公開展示'
+    // note: '內部系統，恕不公開展示'
   }
 ];
 

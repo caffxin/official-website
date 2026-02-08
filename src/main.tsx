@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.tsx';
 import './index.css';
 
-// 動態設定 Favicon，確保在 GitHub Pages 上也能正確載入
+// 動態設定 Favicon，確保在部署上也能正確載入
 const favicon = document.createElement("link");
 favicon.rel = "icon";
 favicon.type = "image/svg+xml";
@@ -13,7 +13,7 @@ document.head.appendChild(favicon);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/official-website">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>

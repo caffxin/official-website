@@ -13,7 +13,6 @@ export interface Project {
 }
 
 const DEFAULT_IMAGE = '/images/enterprise-admin-system.jpg';
-const MAIN_COLOR = '#0D1E4C';
 
 const ProjectCard: React.FC<Project> = ({
   projectName,
@@ -29,7 +28,7 @@ const ProjectCard: React.FC<Project> = ({
     <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full relative shadow">
       <img src={image || DEFAULT_IMAGE} alt={projectName} className="w-full h-40 object-cover rounded-t-lg" />
       <div className="p-4 flex-1 flex flex-col">
-        <h2 className="text-lg font-bold mb-1 text-[#0D1E4C] leading-snug">{projectName}</h2>
+        <h2 className="text-lg font-bold mb-1 text-[#0D1E4C] leading-snug" style={{ fontSize: '1.25rem' }}>{projectName}</h2>
         {projectType && <div className="text-base font-semibold mb-1 text-[#C48CB3]">{projectType}</div>}
         {industry && <div className="text-base mb-2 text-[#26415E] opacity-80">{industry}</div>}
         {problemSolved && problemSolved.length > 0 && (

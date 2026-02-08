@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Handshake, Lightbulb, Brain, Sparkles, Code2 } from 'lucide-react';
+import { Users, Handshake, Lightbulb, Brain, Sparkles } from 'lucide-react';
 
 const MAIN_COLOR = 'rgb(38, 65, 94)';
 const BG_COLOR = 'rgb(242, 246, 250)';
@@ -66,7 +66,7 @@ export default function AboutPage() {
       {/* 頁首大標題區 */}
       <motion.div className="container py-12 flex flex-col items-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <motion.h1 className="text-3xl font-bold mb-4" style={{ color: MAIN_COLOR, fontSize: '1.875rem' }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>關於我們</motion.h1>
-        <motion.p className="text-lg mb-8 text-center max-w-2xl" style={{ color: MAIN_COLOR }} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
+        <motion.p className="text-lg mb-8 text-center max-w-2xl px-4 md:px-0" style={{ color: MAIN_COLOR }} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
           我們是一群熱愛技術、重視合作、追求品質的夥伴，致力於用創新與專業協助客戶實現數位價值。
         </motion.p>
       </motion.div>
