@@ -11,6 +11,8 @@ import ServicesPage from './pages/ServicesPage';
 import ProcessPage from './pages/ProcessPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 import ScrollToTop from './components/ScrollToTop';
 import { motion as motionLink } from 'framer-motion';
 
@@ -395,7 +397,7 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                咖昕科技有限公司（CaffXin Technology Co., Ltd.）
+                咖昕科技有限公司（CaffXin Tech Co., Ltd.）
                 <br />
                 由具備軟體工程背景、同時熱愛咖啡文化的技術團隊創立，
                 結合設計、前後端與系統架構專家，
@@ -693,6 +695,8 @@ function App() {
         <Route path="/process" element={<PageWrapper><ProcessPage /></PageWrapper>} />
         <Route path="/faq" element={<PageWrapper><FAQPage /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><ContactPage /></PageWrapper>} />
+        <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicyPage /></PageWrapper>} />
+        <Route path="/terms-of-service" element={<PageWrapper><TermsOfServicePage /></PageWrapper>} />
       </Routes>
       <Footer />
     </>
