@@ -27,7 +27,7 @@ const portfolioData: Project[] = [
       '整合航班與訪客資料，提升現場資訊一致性',
       '串接通知機制與後台系統，加快作業反應'
     ],
-    techStack: ['.NET', 'React', 'Oracle', 'Windows Server', 'Linux'],
+    techStack: ['.NET', 'React', 'Oracle Database', 'Windows Server', 'Linux'],
     resultsHighlights: [
       '提升現場服務流程效率與資訊即時性',
       '降低人工查詢與重複作業',
@@ -45,7 +45,7 @@ const portfolioData: Project[] = [
       '依實際使用需求進行功能調整與優化',
       '協助系統版本更新與環境維護'
     ],
-    techStack: ['.NET', 'React', 'Oracle', 'Windows Server', 'Linux'],
+    techStack: ['.NET', 'React', 'Oracle Database', 'Windows Server', 'Linux'],
     resultsHighlights: [
       '系統穩定度提升，降低異常與中斷風險',
       '延續既有系統使用年限，降低重建成本',
@@ -87,22 +87,30 @@ const portfolioData: Project[] = [
     image: `${import.meta.env.BASE_URL}images/eyes_erp.jpg`,
     // note: '內部系統，恕不公開展示'
   },
-  {
-    projectName: '旅遊部落格網站建置',
-    projectType: '網站架設｜部落格經營',
-    industry: '自媒體 / 內容平台',
+  { 
+    projectName: '企業成本分配自動化系統建置',
+    projectType: '企業內部系統｜財務自動化',
+    industry: '保險 / 金融服務業',
     problemSolved: [
-      '分享旅遊行程與生活紀錄',
-      '支援業配合作與品牌經營',
-      '客製主題、SEO 優化與教學'
+      '建構標準化指標管理機制',
+      '自動化指標設定與成本計算流程',
+      '降低人工 Excel 作業錯誤與審計風險',
+      '支援 IFRS17 成本歸屬與報表產出需求'
     ],
-    techStack: ['WordPress', 'Elementor', 'Rank Math', 'WPvivid', 'Site Mailer'],
+    techStack: [
+      'Linux',
+      'Vue',
+      'TypeScript',
+      'Java',
+      'Apache',
+      'Oracle Database'
+    ],
     resultsHighlights: [
-      '完整自媒體平台，提升品牌形象',
-      '加強 SEO 與內容行銷效益'
+      '成本分配流程自動化，縮短結算時程',
+      '建立標準化分攤邏輯與稽核追溯機制',
+      '強化財務透明度，提升管理決策效率'
     ],
-    image: `${import.meta.env.BASE_URL}images/travel_blog.jpg`,
-    // note: 'https://aiwajourney.com/'
+    image: `${import.meta.env.BASE_URL}images/cost_allocation_system.jpg`
   },
   {
     projectName: '公會會籍系統報表開發',
