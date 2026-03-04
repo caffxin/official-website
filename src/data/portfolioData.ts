@@ -37,7 +37,7 @@ const portfolioData: Project[] = [
     // note: '僅限諮詢展示'
   },
   {
-    projectName: '業務系統維護與優化',
+    projectName: '警務機關行政系統維護與優化',
     projectType: '既有系統維護',
     industry: '行政資訊系統',
     problemSolved: [
@@ -45,7 +45,7 @@ const portfolioData: Project[] = [
       '依實際使用需求進行功能調整與優化',
       '協助系統版本更新與環境維護'
     ],
-    techStack: ['.NET', 'React', 'Oracle Database', 'Windows Server', 'Linux'],
+    techStack: ['.NET', 'Windows Server'],
     resultsHighlights: [
       '系統穩定度提升，降低異常與中斷風險',
       '延續既有系統使用年限，降低重建成本',
