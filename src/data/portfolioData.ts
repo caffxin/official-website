@@ -41,14 +41,15 @@ const portfolioData: Project[] = [
     projectType: '既有系統維護',
     industry: '行政資訊系統',
     problemSolved: [
-      '負責既有業務系統日常維護與問題排除',
-      '依實際使用需求進行功能調整與優化',
+      '負責行政系統日常維護與問題排除',
+      '依內部需求進行功能調整與優化',
       '協助系統版本更新與環境維護'
     ],
     techStack: ['.NET', 'Windows Server'],
     resultsHighlights: [
-      '系統穩定度提升，降低異常與中斷風險',
-      '延續既有系統使用年限，降低重建成本',
+      '確保行政系統穩定運行，降低異常與服務中斷風險',
+      '延續既有系統使用價值，降低整體維運與開發成本',
+      '透過持續優化與版本更新，提升系統使用效率與可靠性'
     ],
     image: `${import.meta.env.BASE_URL}images/bm_service.jpg`,
     // note: '僅限諮詢展示'
