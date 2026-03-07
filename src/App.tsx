@@ -113,7 +113,7 @@ function App() {
     }
   };
 
-  const MotionLink = motion(Link);
+  const MotionLink = motion.create(Link);
 
   const HomePage = () => (
     <>

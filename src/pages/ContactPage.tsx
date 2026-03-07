@@ -62,42 +62,42 @@ const ContactPage: React.FC = () => {
             </motion.h3>
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-3">
-                <Briefcase className="text-primary-800 mt-1" size={20} />
+                <Briefcase className="text-primary-800 mt-1 flex-shrink-0" size={20} strokeWidth={1.5} />
                 <div>
                   <span className="font-bold">專案類型</span>
                   <span className="ml-2 text-gray-700">（如網站開發、系統整合、API串接、頁面設計等）</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Layers className="text-primary-800 mt-1" size={20} />
+                <Layers className="text-primary-800 mt-1 flex-shrink-0" size={20} strokeWidth={1.5} />
                 <div>
                   <span className="font-bold">專案背景</span>
                   <span className="ml-2 text-gray-700">（您的產業類別、目前的情況、希望解決的問題）</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <ClipboardList className="text-primary-800 mt-1" size={20} />
+                <ClipboardList className="text-primary-800 mt-1 flex-shrink-0" size={20} strokeWidth={1.5} />
                 <div>
                   <span className="font-bold">主要功能需求</span>
                   <span className="ml-2 text-gray-700">（例：「開發一個會員系統，包含註冊、登入、權限管理等」）</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Calendar className="text-primary-800 mt-1" size={20} />
+                <Calendar className="text-primary-800 mt-1 flex-shrink-0" size={20} strokeWidth={1.5} />
                 <div>
                   <span className="font-bold">預計時程</span>
                   <span className="ml-2 text-gray-700">（希望何時開始、何時需要完成）</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <DollarSign className="text-primary-800 mt-1" size={20} />
+                <DollarSign className="text-primary-800 mt-1 flex-shrink-0" size={20} strokeWidth={1.5} />
                 <div>
                   <span className="font-bold">預算範圍</span>
                   <span className="ml-2 text-gray-700">（若有預算考量，請提供參考範圍，以便我們評估最佳方案）</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Settings className="text-primary-800 mt-1" size={20} />
+                <Settings className="text-primary-800 mt-1 flex-shrink-0" size={20} strokeWidth={1.5} />
                 <div>
                   <span className="font-bold">特殊需求</span>
                   <span className="ml-2 text-gray-700">（如指定技術、與現有系統整合、支援語言或平台）</span>
@@ -106,20 +106,20 @@ const ContactPage: React.FC = () => {
             </div>
             <div className="mb-4 space-y-2">
               <div className="flex items-center gap-2 text-primary-800 font-bold">
-                <MessageCircle size={18} />
+                <MessageCircle size={20} strokeWidth={1.5} />
                 歡迎來信與我們聊聊您的需求，我們提供免費初步諮詢，讓您在了解服務內容後，再決定是否進一步合作。
               </div>
             </div>
             <motion.div className="space-y-4" variants={containerVariants} initial="hidden" animate="visible">
               <motion.div className="flex items-center" variants={itemVariants} whileHover={{ x: 5 }}>
                 <motion.div className="text-secondary-300 mr-3" whileHover={{ rotate: 15 }} transition={{ duration: 0.2 }}>
-                  <Mail size={20} />
+                  <Mail size={20} strokeWidth={1.5} />
                 </motion.div>
                 <a href="mailto:caffxin.tech@gmail.com" className="text-gray-700 hover:text-primary-800">
                   caffxin.tech@gmail.com
                 </a>
                 <motion.button className="text-secondary-300 hover:text-primary-800 p-1" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => copyToClipboard('caffxin.tech@gmail.com')}>
-                  <Copy size={16} />
+                  <Copy size={16} strokeWidth={1.5} />
                 </motion.button>
               </motion.div>
             </motion.div>
