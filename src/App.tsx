@@ -14,7 +14,6 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 import ScrollToTop from './components/ScrollToTop';
-import { motion as motionLink } from 'framer-motion';
 
 function App() {
   const { scrollYProgress } = useScroll();
