@@ -107,7 +107,7 @@ const ContactPage: React.FC = () => {
             <div className="mb-4 space-y-2">
               <div className="flex items-center gap-2 text-primary-800 font-bold">
                 <MessageCircle size={18} />
-                我們提供免費諮詢，來信後我們將與您詳談，再決定是否進一步合作！
+                歡迎來信與我們聊聊您的需求，我們提供免費初步諮詢，讓您在了解服務內容後，再決定是否進一步合作。
               </div>
             </div>
             <motion.div className="space-y-4" variants={containerVariants} initial="hidden" animate="visible">
