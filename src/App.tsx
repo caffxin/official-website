@@ -7,7 +7,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import PortfolioPage from './pages/PortfolioPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ProcessPage from './pages/ProcessPage';
 import FAQPage from './pages/FAQPage';
@@ -696,7 +695,6 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<PageWrapper><AboutPage /></PageWrapper>} />
         <Route path="/services" element={<PageWrapper><ServicesPage /></PageWrapper>} />
         <Route path="/portfolio" element={<PageWrapper><PortfolioPage /></PageWrapper>} />
         <Route path="/process" element={<PageWrapper><ProcessPage /></PageWrapper>} />

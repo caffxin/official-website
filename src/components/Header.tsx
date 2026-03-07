@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  // { name: '關於我們', path: '/about' },
   { name: '服務項目', path: '/services' },
   { name: '精選案例', path: '/portfolio' },
   { name: '合作流程', path: '/process' },
